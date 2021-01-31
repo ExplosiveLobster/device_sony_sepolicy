@@ -15,7 +15,7 @@ r_dir_file(ueventd, wifi_vendor_data_file)
 # https://android.googlesource.com/platform/system/core/+/android-10.0.0_r33/rootdir/ueventd.rc#1
 # Hide this denial as any use of the link is misleading and wrong:
 dontaudit ueventd firmware_file:lnk_file read;
-
+dontaudit ueventd self:capability sys_admin;
 allow ueventd {
     { sysfs_type - usermodehelper }
 }:file w_file_perms;
